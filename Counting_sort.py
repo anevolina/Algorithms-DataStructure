@@ -33,7 +33,7 @@ print('Sort is working correctly:', sorted_array == sorted(array))
 
 cs_time = 0
 for i in range(20):
-    array = [randint(1, 99) for j in range(100000)]
+    array = [randint(1, 99) for j in range(1000)]
 
     start = time.time()
     counting_sorted = counting_sort(array)
