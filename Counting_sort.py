@@ -2,8 +2,7 @@ from random import randint
 import time
 
 def counting_sort(array):
-    length = max(array)
-    aux_array = [0 for i in range(length + 1)]
+    aux_array = [0 for i in range(100)]
 
     for i in range(len(array)):
         aux_array[array[i]] += 1
@@ -27,14 +26,14 @@ Test sort
 """
 
 
-array = [randint(1, 100) for i in range(10)]
+array = [randint(1, 99) for i in range(10)]
 sorted_array = counting_sort(array)
 
 print('Sort is working correctly:', sorted_array == sorted(array))
 
 cs_time = 0
 for i in range(20):
-    array = [randint(0, 100) for j in range(1000)]
+    array = [randint(1, 99) for j in range(100000)]
 
     start = time.time()
     counting_sorted = counting_sort(array)
